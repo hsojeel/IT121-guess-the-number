@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Guess The Number</title>
+</head>
+<body>
+    <script>
+        let num = Math.floor(Math.random() * 21 + 1);
+        let guess = prompt("guess a number between 1 and 21");
+        let correctNum = false;
+        let numGuess = 0;
 
+            while(correctNum == false){
+                if(num == guess){
+                correctNum = true; 
+                }else{
+                if(num > guess){
+                    guess = prompt('Guess Higher!');
+                }else{
+                    guess = prompt('Guess Lower!');
+                }
+                numGuess++;
+            }
+        }
+
+        alert("You got the correct number! This took you " + numGuess + " guesses!");
+
+	</script>
+</body>
+</html>
